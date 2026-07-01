@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700;800&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #c45200;
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(to right, #7a1200, #5a0e00);
+  padding: 14px 30px;
+  text-align: center;
+  border-bottom: 3px solid #e85d04;
+}
+
+header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: white;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+/* GRID */
+#menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 12px;
+  padding: 12px;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* STALL CARD */
+.stall-card {
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #111;
+  position: relative;
+}
+
+.stall-image {
+  position: relative;
+  height: 110px;
+  background-size: cover;
+  background-position: center;
+  background-color: #333;
+}
+
+.stall-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7));
+}
+
+.stall-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #e85d04;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.stall-name {
+  position: absolute;
+  bottom: 10px;
+  left: 14px;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 800;
+  z-index: 2;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+.stall-menu {
+  background: rgba(20, 20, 20, 0.95);
+  padding: 10px 14px;
+  flex: 1;
+}
+
+.best-sellers-label {
+  color: #e85d04;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.menu-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  color: white;
+  font-size: 0.85rem;
+}
+
+.menu-row:last-child {
+  border-bottom: none;
+}
+
+.menu-row .price {
+  color: #e85d04;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.no-menu {
+  color: #666;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.closed-overlay {
+  opacity: 0.4;
+}
+
+/* FOOTER */
+footer {
+  background: linear-gradient(to right, #5a0e00, #7a3500);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 3px solid #e85d04;
+  min-height: 80px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#qr-img {
+  width: 70px;
+  height: 70px;
+  border: 3px solid white;
+  border-radius: 6px;
+  background: white;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.footer-text strong {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.footer-text span {
+  font-size: 0.75rem;
+  opacity: 0.85;
+  margin-top: 2px;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.countdown-box {
+  background: #e85d04;
+  border-radius: 10px;
+  padding: 8px 20px;
+  text-align: center;
+  color: white;
+  min-width: 130px;
+}
+
+.countdown-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+#countdown {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+#page-label {
+  font-size: 0.65rem;
+  opacity: 0.85;
+  margin-top: 2px;
+}

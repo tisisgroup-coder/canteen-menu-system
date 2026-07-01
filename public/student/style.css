@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700;800&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #1a1a1a;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  background: linear-gradient(to bottom, #7a1200, #c45200);
+  padding: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+header h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.3rem;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.75);
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+#search {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 25px;
+  border: none;
+  font-size: 0.9rem;
+  font-family: 'Montserrat', sans-serif;
+  background: rgba(255,255,255,0.95);
+  outline: none;
+}
+
+#store-list {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stall-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  background: #111;
+}
+
+.stall-card.closed { opacity: 0.5; }
+
+.stall-image {
+  position: relative;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  background-color: #333;
+}
+
+.stall-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.65));
+}
+
+.stall-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #e85d04;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.stall-status {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.stall-status.open { background: #2ecc71; color: white; }
+.stall-status.closed-badge { background: #e74c3c; color: white; }
+
+.stall-name {
+  position: absolute;
+  bottom: 8px;
+  left: 12px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 800;
+  z-index: 2;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+.stall-menu {
+  background: #1a1a1a;
+  padding: 10px 14px 14px;
+}
+
+.best-sellers-label {
+  color: #e85d04;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.menu-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  color: white;
+  font-size: 0.85rem;
+}
+
+.menu-row:last-child { border-bottom: none; }
+
+.menu-row .price {
+  color: #e85d04;
+  font-weight: 700;
+}
+
+.no-menu {
+  color: #555;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 8px 0;
+}
+
+footer {
+  background: linear-gradient(to right, #7a1200, #c45200);
+  padding: 16px;
+  text-align: center;
+  color: white;
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
