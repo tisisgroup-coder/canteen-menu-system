@@ -50,10 +50,15 @@ function getPublicURL() {
   return `http://localhost:${PORT}`;
 }
 
+const FEEDBACK_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScQ8Do2uSqBTKCMIS_IGq4vTifWQQxRu9C1hIuJlNsVzsXINQ/viewform';
+
 async function generateQR() {
   const url = `${getPublicURL()}/student`;
   await QRCode.toFile(path.join(__dirname, '../public/qr.png'), url);
   console.log(`QR Code generated for: ${url} ✅`);
+
+  await QRCode.toFile(path.join(__dirname, '../public/feedback-qr.png'), FEEDBACK_FORM_URL);
+  console.log(`Feedback QR Code generated ✅`);
 }
 
 const PORT = process.env.PORT || 3000;
